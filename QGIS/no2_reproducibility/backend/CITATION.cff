@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated dataset when reusing these analyses."
+type: software
+title: "Analysis code for the Friday NO2 decline across Algerian cities"
+version: 1.0.0
+date-released: 2026-11-22
+license: MIT
+authors:
+  - family-names: GANA
+    given-names: Mohamed
+    orcid: "https://orcid.org/0000-0003-0775-6954"
+    affiliation: "Université des Frères Mentouri – Constantine 1, Algeria"
+  - family-names: TOUABA
+    given-names: Chaima
+    affiliation: "Territorial Planning Research Centre (CRAT), Constantine, Algeria"
+  - family-names: SAINT-GERAND
+    given-names: Thierry
+    affiliation: "Laboratoire IDEES-Caen, UMR 6266 CNRS, Université de Caen Normandie, France"
+contact:
+  - family-names: GANA
+    given-names: Mohamed
+    email: gana.mohammed@umc.edu.dz
