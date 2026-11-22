@@ -1,0 +1,20 @@
+site,latitude_deg_north,longitude_deg_east,group,selection_basis
+algiers,36.75,3.06,study,Fixed study coordinate
+oran,35.7,-0.63,study,Fixed study coordinate
+arzew,35.85,-0.31,study,Fixed study coordinate
+constantine,36.37,6.61,study,Fixed study coordinate
+setif,36.19,5.41,study,Fixed study coordinate
+hassi_messaoud,31.68,6.07,study,Fixed study coordinate
+control_tell,35,5.25,initial_background,Static-layer eligibility and amendments recorded in staged plans
+control_highland,34.5,-1,initial_background,Static-layer eligibility and amendments recorded in staged plans
+ctl_x01,35.75,2.25,additional_background,Static-layer eligibility and amendments recorded in staged plans
+ctl_x02,35.75,3.5,additional_background,Static-layer eligibility and amendments recorded in staged plans
+ctl_x03,36,8,additional_background,Static-layer eligibility and amendments recorded in staged plans
+ctl_x04,35.25,7,additional_background,Static-layer eligibility and amendments recorded in staged plans
+annaba,36.9,7.77,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+tlemcen,34.88,-1.32,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+biskra,34.85,5.73,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+djelfa,34.67,3.26,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+chlef,36.17,1.33,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+tebessa,35.4,8.12,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"
+tiaret,35.37,1.32,replication_city,"Approximate capital population/distance rule; source-mix classification from general knowledge, not census verification"

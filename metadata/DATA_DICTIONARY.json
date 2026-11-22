@@ -1,0 +1,892 @@
+{
+  "missing_values": "Processed CSVs preserve blank or nan values; raw GeoTIFFs use -9999 as nodata. Missingness is not imputed. A present date is not necessarily usable. Model scripts filter nonpositive NO2 and wind/BLH where logs are required.",
+  "time_sampling": "Original ERA5 exports use 12 and 13 UTC; TROPOMI clear-sky overpass sampling. See scripts and manuscript.",
+  "column_conventions": "pct/lo/hi are percentage changes and interval endpoints unless explicitly named beta/slope/log; log coefficients and ventilation slopes are dimensionless; *_kt_yr is kt per year; n/n_windows are counts. The 2020 descriptive range is not a coverage-validated confidence interval.",
+  "quality": "Original coverage threshold is at least 30% valid pixels in both disc and annulus; export product masking is documented in GEE scripts. NPZ clips retain qa_value and product/processor metadata.",
+  "npz_columns": "Native Level-2 no2_trop_mol_m2 and precision are mol m-2, not µmol m-2. Coordinates are degrees, QA and kernels are dimensionless. Surface pressure and TM5 constants are native product quantities; use the conversion code and product documentation.",
+  "schemas": {
+    "outputs/no2_ventilation_daily_v2.csv": {
+      "rows": 14034,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    },
+    "outputs/control/control_no2_ventilation_daily.csv": {
+      "rows": 4678,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    },
+    "outputs/control_extra/no2_ventilation_daily.csv": {
+      "rows": 9356,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    },
+    "outputs/study_2026/no2_ventilation_daily.csv": {
+      "rows": 1908,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    },
+    "outputs/cities/no2_ventilation_daily.csv": {
+      "rows": 18599,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    },
+    "outputs/l2_ak_daily.csv": {
+      "rows": 11855,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "n_pix": {
+          "unit": "count",
+          "definition": "Retained Level-2 pixels"
+        },
+        "vcd": {
+          "unit": "µmol m-2",
+          "definition": "Level-2 retrieved tropospheric column"
+        },
+        "vcd_bl": {
+          "unit": "µmol m-2",
+          "definition": "Column for boundary-layer profile sensitivity"
+        },
+        "vcd_un": {
+          "unit": "µmol m-2",
+          "definition": "Column for uniform-troposphere profile sensitivity"
+        },
+        "f_bl": {
+          "unit": "ratio",
+          "definition": "Kernel-weighted profile factor; replaced column equals retrieved column / factor"
+        },
+        "f_un": {
+          "unit": "ratio",
+          "definition": "As f_bl, for uniform tropospheric profile"
+        },
+        "amf_trop": {
+          "unit": "dimensionless",
+          "definition": "Tropospheric air-mass factor"
+        },
+        "cloud_rad_frac": {
+          "unit": "fraction",
+          "definition": "Cloud radiance fraction in NO2 window"
+        },
+        "albedo": {
+          "unit": "dimensionless",
+          "definition": "Surface albedo in retrieval window"
+        },
+        "hour_utc": {
+          "unit": "UTC hour",
+          "definition": "Mean overpass hour for retained Level-2 pixels"
+        }
+      }
+    },
+    "outputs/l2_v240_daily_q75all.csv": {
+      "rows": 10724,
+      "fields": {
+        "site": {
+          "unit": "identifier",
+          "definition": "Join with sites.csv"
+        },
+        "date": {
+          "unit": "UTC date",
+          "definition": "Daily calendar date, YYYY-MM-DD"
+        },
+        "no2_inner": {
+          "unit": "µmol m-2",
+          "definition": "Mean tropospheric NO2 column within 10 km"
+        },
+        "inner_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "inner_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_ring": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in the 50–100 km annulus"
+        },
+        "ring_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "ring_total": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_box": {
+          "unit": "µmol m-2",
+          "definition": "Mean column in exported box"
+        },
+        "box_n": {
+          "unit": "pixel count",
+          "definition": "Valid or total pixels in the indicated footprint"
+        },
+        "no2_delta": {
+          "unit": "µmol m-2",
+          "definition": "Inner-disc minus regional-ring mean"
+        },
+        "usable": {
+          "unit": "0 or 1",
+          "definition": "Coverage flag; model fitting additionally requires finite positive model inputs"
+        },
+        "u10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd10": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir10": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "blh": {
+          "unit": "m",
+          "definition": "ERA5 boundary-layer height"
+        },
+        "t2m": {
+          "unit": "K",
+          "definition": "ERA5 temperature at 2 m"
+        },
+        "sp_hpa": {
+          "unit": "hPa",
+          "definition": "ERA5 surface pressure"
+        },
+        "ssrd_jm2": {
+          "unit": "J m-2",
+          "definition": "ERA5 surface solar radiation downwards in supplied export"
+        },
+        "tp_mm": {
+          "unit": "mm",
+          "definition": "Precipitation in supplied export"
+        },
+        "vc10": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd_layer": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wdir_layer": {
+          "unit": "degrees",
+          "definition": "Wind direction calculated by original code"
+        },
+        "n_levels_in_blh": {
+          "unit": "count",
+          "definition": "Levels represented below BLH in original computation"
+        },
+        "vclayer": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vc100": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "vcprof": {
+          "unit": "m2 s-1",
+          "definition": "BLH multiplied by corresponding wind speed; legacy vclayer is retained for provenance"
+        },
+        "wspd100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "wspd_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v100": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "u_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        },
+        "v_prof": {
+          "unit": "m s-1",
+          "definition": "ERA5 wind component/speed; prof is the four-level approximation described in manuscript"
+        }
+      }
+    }
+  }
+}
