@@ -1,0 +1,32 @@
+{
+  "title": "Analysis code for The Friday NO₂ decline across Algerian cities in weather-normalised TROPOMI observations: Replication and limits of short-event attribution",
+  "upload_type": "software",
+  "description": "Portable publication code and staged analysis plans for the Algerian TROPOMI NO2 study. The release preserves the original statistical models; portability changes and new export/validation tools are documented. Input data are distributed separately. No public DOI or repository URL is claimed before deposit.",
+  "creators": [
+    {
+      "name": "GANA, Mohamed",
+      "affiliation": "Laboratoire de Développement et Valorisation des Ressources Phytogénétiques, Département d’Écologie et Environnement, Université des Frères Mentouri – Constantine 1, Algeria",
+      "orcid": "0000-0003-0775-6954"
+    },
+    {
+      "name": "TOUABA, Chaima",
+      "affiliation": "Territorial Planning Research Centre (CRAT), Constantine, Algeria"
+    },
+    {
+      "name": "SAINT-GERAND, Thierry",
+      "affiliation": "Laboratoire IDEES-Caen, UMR 6266 CNRS, Université de Caen Normandie, France"
+    }
+  ],
+  "version": "1.0.0",
+  "publication_date": "2026-11-22",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "TROPOMI",
+    "NO2",
+    "Algeria",
+    "Friday",
+    "weather normalisation",
+    "reproducibility"
+  ]
+}

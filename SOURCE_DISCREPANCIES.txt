@@ -1,0 +1,9 @@
+Source-version discrepancy to reconcile before manuscript submission
+
+The supplied Site_covariates.js and Control_site_screen.js use ESA/WorldCover/v200, representing 2021. The manuscript and earlier package documentation cite WorldCover 2020/v100. The QGIS/Python translations preserve v200 (2021) exactly as the supplied code does. Archived candidate tables and selections have not been regenerated or replaced. Verify the provenance of the actual archived summaries, and reconcile the manuscript citation/year with that evidence. Do not change the raster version silently to fit the prose.
+
+Also, the site-descriptor scripts use a 2019–2025 mean of NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG, rather than an explicitly identified annual-light product. This definition is preserved by the Python translation and should be described accurately in the manuscript. These observations were found while converting the original export definitions; they are not new numerical analyses.
+
+Official dataset descriptions:
+https://developers.google.com/earth-engine/datasets/catalog/ESA_WorldCover_v200
+https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_MONTHLY_V1_VCMSLCFG

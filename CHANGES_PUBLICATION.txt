@@ -1,0 +1,22 @@
+Publication preparation 2026-11-22
+
+Scientific estimators, data filters and numerical reference CSVs were preserved.
+The wind-rotation subfolder fit CSV is synchronised to outputs/wind_rotation_results.csv in the publication copy only; the original two files are retained unchanged in the source project.
+Portability/documentation change: scripts/analysis/detect_calibrate.py
+Portability/documentation change: scripts/analysis/detect_friday_cities.py
+Portability/documentation change: scripts/analysis/detect_friday_holdout.py
+Portability/documentation change: scripts/analysis/detect_friday_se_check.py
+Portability/documentation change: scripts/analysis/detect_injection.py
+Portability/documentation change: scripts/analysis/detect_seasonal.py
+Portability/documentation change: scripts/analysis/fig_friday.py
+Portability/documentation change: scripts/analysis/fig_no2_vs_ventilation.py
+Portability/documentation change: scripts/analysis/fig_wind_rotation.py
+Portability/documentation change: scripts/analysis/run_extra_detect.py
+Portability/documentation change: scripts/analysis/run_extra_sites.py
+Portability/documentation change: scripts/analysis/wind_rotation.py
+New export and replay utilities are identified separately; they do not retrospectively change the analysis plans.
+
+Additional changes: explicit Figure 2 and Table 8 exports; CLI replay and verification; raw input folder mapping; --skip-ml switch for OLS replay only; licence/citation metadata and data dictionary. Statistical kernels and model choices were not changed. Figure 1 slope labels are now calculated from the plotted data.
+Original Windows BAT launchers were replaced by the portable runner; the GEE scripts and Python downloaders remain.
+
+QGIS conversion: 48 native Processing tools; isolated backend setup; original scientific kernels preserved; 13 JS export definitions translated to Python. The static WorldCover/VIIRS source-version discrepancy is documented without changing archived data or manuscript files.

@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-22",
+  "mode": "extended",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "commands_executed": 20,
+  "comparisons": [
+    {
+      "check": "Friday original",
+      "rows": 8,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "holdout",
+      "rows": 6,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "cities",
+      "rows": 7,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "SE 2019_2025",
+      "rows": 24,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "SE 2026",
+      "rows": 24,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "SE pooled",
+      "rows": 52,
+      "matches": true,
+      "tolerance": 1e-07,
+      "differences": []
+    },
+    {
+      "check": "lockdown_effect.csv",
+      "rows": 24,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "lockdown_placebo.csv",
+      "rows": 8,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "trend_version_steps.csv",
+      "rows": 8,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "Seasonal windows",
+      "rows": 96,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "sensitivity_blh_wind_split.csv",
+      "rows": 6,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "sensitivity_version_steps.csv",
+      "rows": 8,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "l2_ak_elasticity.csv",
+      "rows": 6,
+      "matches": true,
+      "tolerance": 1e-05,
+      "differences": []
+    },
+    {
+      "check": "sensitivity_outliers.csv",
+      "rows": 18,
+      "matches": true,
+      "tolerance": 0.0001,
+      "differences": []
+    },
+    {
+      "check": "sensitivity_dust.csv",
+      "rows": 24,
+      "matches": true,
+      "tolerance": 0.0001,
+      "differences": []
+    },
+    {
+      "check": "sensitivity_season_ring.csv",
+      "rows": 36,
+      "matches": true,
+      "tolerance": 0.0001,
+      "differences": []
+    }
+  ],
+  "all_compared_results_match": true,
+  "raw_extraction_smoke": {
+    "site": "algiers",
+    "year": 2019,
+    "days": 147,
+    "exact_csv_equality": true
+  },
+  "scope": "A new isolated Python 3.12 environment was used. Replay starts from the distributed processed tables, with one independent raw-GeoTIFF extraction smoke test. Full ML/injection/calibration experiments and all raw spatial processing were not rerun. Figure 4 is regenerated from archived estimates; Figure S1 from archived spatial summaries. Fresh figure rendering is not a bytewise comparison with publication PNGs.",
+  "additional_subperiod_export": {
+    "rows": 24,
+    "rounded_values_checked": 16,
+    "matches_article": true
+  }
+}

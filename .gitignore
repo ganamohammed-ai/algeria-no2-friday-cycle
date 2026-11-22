@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.cdsapirc
+*credentials*
+key.txt
+reproduced_results*/
+outputs/
+data/
+*.tif
+*.npz
+*.nc
+*.zip
+Thumbs.db
+desktop.ini
