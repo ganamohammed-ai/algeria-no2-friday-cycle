@@ -1,0 +1,277 @@
+[
+  {
+    "source": "scripts/analysis/analyze_no2_ventilation.py",
+    "qgis_algorithm": "no2algeria:analyze_no2_ventilation",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/compare_edgar.py",
+    "qgis_algorithm": "no2algeria:compare_edgar",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/decompose_blh_wind.py",
+    "qgis_algorithm": "no2algeria:decompose_blh_wind",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_calibrate.py",
+    "qgis_algorithm": "no2algeria:detect_calibrate",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_friday_cities.py",
+    "qgis_algorithm": "no2algeria:detect_friday_cities",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_friday_holdout.py",
+    "qgis_algorithm": "no2algeria:detect_friday_holdout",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_friday_se_check.py",
+    "qgis_algorithm": "no2algeria:detect_friday_se_check",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_injection.py",
+    "qgis_algorithm": "no2algeria:detect_injection",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/detect_seasonal.py",
+    "qgis_algorithm": "no2algeria:detect_seasonal",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/export_friday_subperiods.py",
+    "qgis_algorithm": "no2algeria:export_friday_subperiods",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/export_table8.py",
+    "qgis_algorithm": "no2algeria:export_table8",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/fig_elasticity_controls.py",
+    "qgis_algorithm": "no2algeria:fig_elasticity_controls",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/fig_friday.py",
+    "qgis_algorithm": "no2algeria:fig_friday",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/fig_lockdown.py",
+    "qgis_algorithm": "no2algeria:fig_lockdown",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/fig_no2_vs_ventilation.py",
+    "qgis_algorithm": "no2algeria:fig_no2_vs_ventilation",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/fig_wind_rotation.py",
+    "qgis_algorithm": "no2algeria:fig_wind_rotation",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/friday_cycle.py",
+    "qgis_algorithm": "no2algeria:friday_cycle",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/l2_ak_analysis.py",
+    "qgis_algorithm": "no2algeria:l2_ak_analysis",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/l2_ak_check.py",
+    "qgis_algorithm": "no2algeria:l2_ak_check",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/l2_daily_table.py",
+    "qgis_algorithm": "no2algeria:l2_daily_table",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/lockdown_l2.py",
+    "qgis_algorithm": "no2algeria:lockdown_l2",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/lockdown_normalisation.py",
+    "qgis_algorithm": "no2algeria:lockdown_normalisation",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/run_extra_detect.py",
+    "qgis_algorithm": "no2algeria:run_extra_detect",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/run_extra_sites.py",
+    "qgis_algorithm": "no2algeria:run_extra_sites",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/select_control.py",
+    "qgis_algorithm": "no2algeria:select_control",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/select_extra_controls.py",
+    "qgis_algorithm": "no2algeria:select_extra_controls",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/sensitivity_analyses.py",
+    "qgis_algorithm": "no2algeria:sensitivity_analyses",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/sensitivity_version_steps.py",
+    "qgis_algorithm": "no2algeria:sensitivity_version_steps",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/version_audit.py",
+    "qgis_algorithm": "no2algeria:version_audit",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/analysis/wind_rotation.py",
+    "qgis_algorithm": "no2algeria:wind_rotation",
+    "group": "Analysis scripts",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/download/era5_download.py",
+    "qgis_algorithm": "no2algeria:era5_download",
+    "group": "Downloads",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "scripts/download/tropomi_download.py",
+    "qgis_algorithm": "no2algeria:tropomi_download",
+    "group": "Downloads",
+    "implementation": "Native Processing parameters with original scientific backend"
+  },
+  {
+    "source": "C1_ERA5_export_2026_study_sites.js",
+    "qgis_algorithm": "no2algeria:gee_c1_era5_export_2026_study_sites",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "C1_NO2_export_2026_study_sites.js",
+    "qgis_algorithm": "no2algeria:gee_c1_no2_export_2026_study_sites",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "C2_ERA5_export_new_cities.js",
+    "qgis_algorithm": "no2algeria:gee_c2_era5_export_new_cities",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "C2_NO2_export_new_cities.js",
+    "qgis_algorithm": "no2algeria:gee_c2_no2_export_new_cities",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "C2_NO2_retry_failed.js",
+    "qgis_algorithm": "no2algeria:gee_c2_no2_retry_failed",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "Control_site_screen.js",
+    "qgis_algorithm": "no2algeria:gee_control_site_screen",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "D_ERA5_export_extra_controls.js",
+    "qgis_algorithm": "no2algeria:gee_d_era5_export_extra_controls",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "D_NO2_export_extra_controls.js",
+    "qgis_algorithm": "no2algeria:gee_d_no2_export_extra_controls",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "ERA5_GEE_export.js",
+    "qgis_algorithm": "no2algeria:gee_era5_gee_export",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "ERA5_GEE_export_controls.js",
+    "qgis_algorithm": "no2algeria:gee_era5_gee_export_controls",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "NO2_daily_export_controls.js",
+    "qgis_algorithm": "no2algeria:gee_no2_daily_export_controls",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "S5P_dust_AAI_table.js",
+    "qgis_algorithm": "no2algeria:gee_s5p_dust_aai_table",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "Site_covariates.js",
+    "qgis_algorithm": "no2algeria:gee_site_covariates",
+    "group": "Earth Engine exports",
+    "implementation": "Python Earth Engine translation; offline preview and graph construction tested; no remote export submitted"
+  },
+  {
+    "source": "scripts/download/sites.py",
+    "qgis_algorithm": "no2algeria:sites_layer",
+    "implementation": "Shared coordinate configuration; the module is retained in the backend and the 19 sites are available as a native QGIS point layer."
+  }
+]
