@@ -1,0 +1,1383 @@
+[
+  {
+    "id": "analyze_no2_ventilation",
+    "script": "scripts/analysis/analyze_no2_ventilation.py",
+    "label": "Analyze No2 Ventilation",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--stage",
+        "type": "enum",
+        "required": false,
+        "default": "all",
+        "choices": [
+          "tables",
+          "merge",
+          "model",
+          "all"
+        ],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--tif-dir",
+        "type": "folder",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--era5-dir",
+        "type": "folder",
+        "required": false,
+        "default": "era5",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": "out",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "string",
+        "required": false,
+        "default": "all",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--years",
+        "type": "string",
+        "required": false,
+        "default": "all",
+        "choices": [],
+        "help": "e.g. 2022 or 2019,2020",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "compare_edgar",
+    "script": "scripts/analysis/compare_edgar.py",
+    "label": "Compare Edgar",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--nc",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--rotation",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "decompose_blh_wind",
+    "script": "scripts/analysis/decompose_blh_wind.py",
+    "label": "Decompose Blh Wind",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "detect_calibrate",
+    "script": "scripts/analysis/detect_calibrate.py",
+    "label": "Detect Calibrate",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "OUTPUT_POS",
+        "type": "output",
+        "required": true
+      },
+      {
+        "flag": "TABLES_POS",
+        "type": "list",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "detect_friday_cities",
+    "script": "scripts/analysis/detect_friday_cities.py",
+    "label": "Detect Friday Cities",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "detect_friday_holdout",
+    "script": "scripts/analysis/detect_friday_holdout.py",
+    "label": "Detect Friday Holdout",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "reference",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "detect_friday_se_check",
+    "script": "scripts/analysis/detect_friday_se_check.py",
+    "label": "Detect Friday Se Check",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "OUTPUT_POS",
+        "type": "output",
+        "required": true
+      },
+      {
+        "flag": "TABLES_POS",
+        "type": "list",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "detect_injection",
+    "script": "scripts/analysis/detect_injection.py",
+    "label": "Detect Injection",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--gb",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "string",
+        "required": false,
+        "default": "",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--check",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "reproduce v1 placebo SDs only",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "detect_seasonal",
+    "script": "scripts/analysis/detect_seasonal.py",
+    "label": "Detect Seasonal",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "export_friday_subperiods",
+    "script": "scripts/analysis/export_friday_subperiods.py",
+    "label": "Export Friday Subperiods",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "export_table8",
+    "script": "scripts/analysis/export_table8.py",
+    "label": "Export Table8",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--results",
+        "type": "folder",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "fig_elasticity_controls",
+    "script": "scripts/analysis/fig_elasticity_controls.py",
+    "label": "Fig Elasticity Controls",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--study",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "fig_friday",
+    "script": "scripts/analysis/fig_friday.py",
+    "label": "Fig Friday",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--effects",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "fig_lockdown",
+    "script": "scripts/analysis/fig_lockdown.py",
+    "label": "Fig Lockdown",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--effects",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "fig_no2_vs_ventilation",
+    "script": "scripts/analysis/fig_no2_vs_ventilation.py",
+    "label": "Fig No2 Vs Ventilation",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "fig_wind_rotation",
+    "script": "scripts/analysis/fig_wind_rotation.py",
+    "label": "Fig Wind Rotation",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--input-dir",
+        "type": "folder",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "friday_cycle",
+    "script": "scripts/analysis/friday_cycle.py",
+    "label": "Friday Cycle",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "l2_ak_analysis",
+    "script": "scripts/analysis/l2_ak_analysis.py",
+    "label": "L2 Ak Analysis",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--l2",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "l2_ak_check",
+    "script": "scripts/analysis/l2_ak_check.py",
+    "label": "L2 Ak Check",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--clips",
+        "type": "folder",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--radius",
+        "type": "float",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--qa",
+        "type": "float",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "l2_daily_table",
+    "script": "scripts/analysis/l2_daily_table.py",
+    "label": "L2 Daily Table",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--clips",
+        "type": "list",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "one or more clip folders (study sites, controls)",
+        "nargs": "+"
+      },
+      {
+        "flag": "--table",
+        "type": "list",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "one or more daily tables with the ERA5 columns",
+        "nargs": "+"
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--qa",
+        "type": "float",
+        "required": false,
+        "default": 0.75,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--tag",
+        "type": "string",
+        "required": false,
+        "default": "q75",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "lockdown_l2",
+    "script": "scripts/analysis/lockdown_l2.py",
+    "label": "Lockdown L2",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--l2",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--l3",
+        "type": "list",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": "+"
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--tag",
+        "type": "string",
+        "required": false,
+        "default": "q75",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "lockdown_normalisation",
+    "script": "scripts/analysis/lockdown_normalisation.py",
+    "label": "Lockdown Normalisation",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--skip-ml",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "Replay OLS, placebo and trend tables without the expensive ML fits",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "run_extra_detect",
+    "script": "scripts/analysis/run_extra_detect.py",
+    "label": "Run Extra Detect",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--gb",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "run_extra_sites",
+    "script": "scripts/analysis/run_extra_sites.py",
+    "label": "Run Extra Sites",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "set",
+        "type": "enum",
+        "required": true,
+        "default": null,
+        "choices": [
+          "C1",
+          "C2",
+          "D"
+        ],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--input-root",
+        "type": "folder",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out-root",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "select_control",
+    "script": "scripts/analysis/select_control.py",
+    "label": "Select Control",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "CANDIDATES_POS",
+        "type": "file",
+        "required": true
+      },
+      {
+        "flag": "--amended",
+        "type": "bool",
+        "default": true
+      }
+    ]
+  },
+  {
+    "id": "select_extra_controls",
+    "script": "scripts/analysis/select_extra_controls.py",
+    "label": "Select Extra Controls",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "CANDIDATES_POS",
+        "type": "file",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "sensitivity_analyses",
+    "script": "scripts/analysis/sensitivity_analyses.py",
+    "label": "Sensitivity Analyses",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": "outputs",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--aai-dir",
+        "type": "folder",
+        "required": false,
+        "default": "data/04_dust_aai",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "list",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": "+"
+      }
+    ]
+  },
+  {
+    "id": "sensitivity_version_steps",
+    "script": "scripts/analysis/sensitivity_version_steps.py",
+    "label": "Sensitivity Version Steps",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--table",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--controls",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "version_audit",
+    "script": "scripts/analysis/version_audit.py",
+    "label": "Version Audit",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--progress",
+        "type": "file",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": false,
+        "default": ".",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "wind_rotation",
+    "script": "scripts/analysis/wind_rotation.py",
+    "label": "Wind Rotation",
+    "group": "Analysis scripts",
+    "arguments": [
+      {
+        "flag": "--stage",
+        "type": "enum",
+        "required": true,
+        "default": null,
+        "choices": [
+          "accumulate",
+          "fit"
+        ],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--tif-dir",
+        "type": "folder",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--era5-dir",
+        "type": "folder",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--out",
+        "type": "output",
+        "required": true,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "list",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": "+"
+      },
+      {
+        "flag": "--years",
+        "type": "list",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": "+"
+      },
+      {
+        "flag": "--boot",
+        "type": "int",
+        "required": false,
+        "default": 100,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "era5_download",
+    "script": "scripts/download/era5_download.py",
+    "label": "Era5 Download",
+    "group": "Downloads",
+    "arguments": [
+      {
+        "flag": "--years",
+        "type": "string",
+        "required": false,
+        "default": "2019-2025",
+        "choices": [],
+        "help": "e.g. 2019-2025 or 2024 or 2020,2021",
+        "nargs": null
+      },
+      {
+        "flag": "--months",
+        "type": "string",
+        "required": false,
+        "default": "1-12",
+        "choices": [],
+        "help": "used with --chunk month, e.g. 1-12 or 1 or 12,1,2",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "string",
+        "required": false,
+        "default": "default",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--half-box",
+        "type": "float",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--per-site",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "one small request per site instead of one box covering all sites",
+        "nargs": null
+      },
+      {
+        "flag": "--outdir",
+        "type": "output",
+        "required": false,
+        "default": "era5",
+        "choices": [],
+        "help": "",
+        "nargs": null
+      },
+      {
+        "flag": "--skip-pressure",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "single-level variables only",
+        "nargs": null
+      },
+      {
+        "flag": "--only",
+        "type": "enum",
+        "required": false,
+        "default": null,
+        "choices": [
+          "sl",
+          "pl"
+        ],
+        "help": "download only the single-level (sl) or pressure-level (pl) files",
+        "nargs": null
+      },
+      {
+        "flag": "--chunk",
+        "type": "enum",
+        "required": false,
+        "default": "month",
+        "choices": [
+          "month",
+          "quarter",
+          "year"
+        ],
+        "help": "months per request. year / quarter = far fewer requests (each waits in the CDS queue only once); a request the CDS finds too large is split automatically",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "tropomi_download",
+    "script": "scripts/download/tropomi_download.py",
+    "label": "Tropomi Download",
+    "group": "Downloads",
+    "arguments": [
+      {
+        "flag": "--start",
+        "type": "string",
+        "required": false,
+        "default": "2019-08-07",
+        "choices": [],
+        "help": "first day, YYYY-MM-DD (default 2019-08-07)",
+        "nargs": null
+      },
+      {
+        "flag": "--end",
+        "type": "string",
+        "required": false,
+        "default": "2025-12-31",
+        "choices": [],
+        "help": "last day, YYYY-MM-DD (default 2025-12-31)",
+        "nargs": null
+      },
+      {
+        "flag": "--sites",
+        "type": "string",
+        "required": false,
+        "default": "default",
+        "choices": [],
+        "help": "comma list, e.g. algiers,constantine (default: all)",
+        "nargs": null
+      },
+      {
+        "flag": "--half-box",
+        "type": "float",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "box radius in degrees of latitude",
+        "nargs": null
+      },
+      {
+        "flag": "--min-overlap",
+        "type": "float",
+        "required": false,
+        "default": 0.4,
+        "choices": [],
+        "help": "skip orbit files whose footprint covers less than this fraction of a site box or misses the site centre (default 0.4; 0 = keep everything)",
+        "nargs": null
+      },
+      {
+        "flag": "--workers",
+        "type": "int",
+        "required": false,
+        "default": 3,
+        "choices": [],
+        "help": "parallel downloads (default 3; the server allows at most 4)",
+        "nargs": null
+      },
+      {
+        "flag": "--outdir",
+        "type": "output",
+        "required": false,
+        "default": "tropomi_clips",
+        "choices": [],
+        "help": "folder for the cut pieces",
+        "nargs": null
+      },
+      {
+        "flag": "--rawdir",
+        "type": "string",
+        "required": false,
+        "default": "tropomi_raw_tmp",
+        "choices": [],
+        "help": "temporary folder for the big files",
+        "nargs": null
+      },
+      {
+        "flag": "--no-ak",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "do not keep averaging kernels (smaller output)",
+        "nargs": null
+      },
+      {
+        "flag": "--keep-raw",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "do not delete the big original files",
+        "nargs": null
+      },
+      {
+        "flag": "--count-only",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "only count files and size, download nothing",
+        "nargs": null
+      },
+      {
+        "flag": "--inspect",
+        "type": "bool",
+        "required": false,
+        "default": null,
+        "choices": [],
+        "help": "download ONE file and print its variables",
+        "nargs": null
+      }
+    ]
+  },
+  {
+    "id": "gee_c1_era5_export_2026_study_sites",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "C1_ERA5_export_2026_study_sites.js",
+    "label": "Earth Engine C1 ERA5 export 2026 study sites",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_c1_no2_export_2026_study_sites",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "C1_NO2_export_2026_study_sites.js",
+    "label": "Earth Engine C1 NO2 export 2026 study sites",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_c2_era5_export_new_cities",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "C2_ERA5_export_new_cities.js",
+    "label": "Earth Engine C2 ERA5 export new cities",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_c2_no2_export_new_cities",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "C2_NO2_export_new_cities.js",
+    "label": "Earth Engine C2 NO2 export new cities",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_c2_no2_retry_failed",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "C2_NO2_retry_failed.js",
+    "label": "Earth Engine C2 NO2 retry failed",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_control_site_screen",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "Control_site_screen.js",
+    "label": "Earth Engine Control site screen",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_d_era5_export_extra_controls",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "D_ERA5_export_extra_controls.js",
+    "label": "Earth Engine D ERA5 export extra controls",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_d_no2_export_extra_controls",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "D_NO2_export_extra_controls.js",
+    "label": "Earth Engine D NO2 export extra controls",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_era5_gee_export",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "ERA5_GEE_export.js",
+    "label": "Earth Engine ERA5 GEE export",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_era5_gee_export_controls",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "ERA5_GEE_export_controls.js",
+    "label": "Earth Engine ERA5 GEE export controls",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_no2_daily_export_controls",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "NO2_daily_export_controls.js",
+    "label": "Earth Engine NO2 daily export controls",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_s5p_dust_aai_table",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "S5P_dust_AAI_table.js",
+    "label": "Earth Engine S5P dust AAI table",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  },
+  {
+    "id": "gee_site_covariates",
+    "script": "scripts/analysis/earthengine_exports.py",
+    "original": "Site_covariates.js",
+    "label": "Earth Engine Site covariates",
+    "group": "Earth Engine exports",
+    "gee": true,
+    "arguments": []
+  }
+]

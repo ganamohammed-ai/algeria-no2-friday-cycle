@@ -1,0 +1,351 @@
+{
+  "qgis_validation_3.44.15.json": {
+    "qgis_version": "3.44.15-Solothurn",
+    "registered_algorithms": 48,
+    "quick_replay_passed": true,
+    "site_layer_count": 19,
+    "site_crs": "EPSG:4326",
+    "table8_algorithm_passed": true,
+    "holdout_algorithm_passed": true,
+    "control_selection_algorithm_passed": true,
+    "earthengine_previews": [
+      {
+        "script": "C1_ERA5_export_2026_study_sites.js",
+        "planned_tasks": 1
+      },
+      {
+        "script": "C1_NO2_export_2026_study_sites.js",
+        "planned_tasks": 6
+      },
+      {
+        "script": "C2_ERA5_export_new_cities.js",
+        "planned_tasks": 8
+      },
+      {
+        "script": "C2_NO2_export_new_cities.js",
+        "planned_tasks": 56
+      },
+      {
+        "script": "C2_NO2_retry_failed.js",
+        "planned_tasks": 6
+      },
+      {
+        "script": "Control_site_screen.js",
+        "planned_tasks": 1
+      },
+      {
+        "script": "D_ERA5_export_extra_controls.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "D_NO2_export_extra_controls.js",
+        "planned_tasks": 28
+      },
+      {
+        "script": "ERA5_GEE_export.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "ERA5_GEE_export_controls.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "NO2_daily_export_controls.js",
+        "planned_tasks": 14
+      },
+      {
+        "script": "S5P_dust_AAI_table.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "Site_covariates.js",
+        "planned_tasks": 1
+      }
+    ],
+    "remote_exports_submitted": false,
+    "scope": "Native QGIS Processing execution tested. Remote Earth Engine graphs/exports require user authentication and were not live-validated."
+  },
+  "qgis_validation_4.2.2.json": {
+    "qgis_version": "4.2.2-Bel\u00e9m do Par\u00e1",
+    "registered_algorithms": 48,
+    "quick_replay_passed": true,
+    "site_layer_count": 19,
+    "site_crs": "EPSG:4326",
+    "table8_algorithm_passed": true,
+    "holdout_algorithm_passed": true,
+    "control_selection_algorithm_passed": true,
+    "earthengine_previews": [
+      {
+        "script": "C1_ERA5_export_2026_study_sites.js",
+        "planned_tasks": 1
+      },
+      {
+        "script": "C1_NO2_export_2026_study_sites.js",
+        "planned_tasks": 6
+      },
+      {
+        "script": "C2_ERA5_export_new_cities.js",
+        "planned_tasks": 8
+      },
+      {
+        "script": "C2_NO2_export_new_cities.js",
+        "planned_tasks": 56
+      },
+      {
+        "script": "C2_NO2_retry_failed.js",
+        "planned_tasks": 6
+      },
+      {
+        "script": "Control_site_screen.js",
+        "planned_tasks": 1
+      },
+      {
+        "script": "D_ERA5_export_extra_controls.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "D_NO2_export_extra_controls.js",
+        "planned_tasks": 28
+      },
+      {
+        "script": "ERA5_GEE_export.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "ERA5_GEE_export_controls.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "NO2_daily_export_controls.js",
+        "planned_tasks": 14
+      },
+      {
+        "script": "S5P_dust_AAI_table.js",
+        "planned_tasks": 7
+      },
+      {
+        "script": "Site_covariates.js",
+        "planned_tasks": 1
+      }
+    ],
+    "remote_exports_submitted": false,
+    "scope": "Native QGIS Processing execution tested. Remote Earth Engine graphs/exports require user authentication and were not live-validated."
+  },
+  "qgis_extended_validation.json": {
+    "qgis_version": "4.2.2-Bel\u00e9m do Par\u00e1",
+    "mode": "extended",
+    "comparisons": [
+      {
+        "check": "Friday original",
+        "rows": 8,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "holdout",
+        "rows": 6,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "cities",
+        "rows": 7,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "SE 2019_2025",
+        "rows": 24,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "SE 2026",
+        "rows": 24,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "SE pooled",
+        "rows": 52,
+        "matches": true,
+        "tolerance": 1e-07,
+        "differences": []
+      },
+      {
+        "check": "lockdown_effect.csv",
+        "rows": 24,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "lockdown_placebo.csv",
+        "rows": 8,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "trend_version_steps.csv",
+        "rows": 8,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "Seasonal windows",
+        "rows": 96,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "sensitivity_blh_wind_split.csv",
+        "rows": 6,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "sensitivity_version_steps.csv",
+        "rows": 8,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "l2_ak_elasticity.csv",
+        "rows": 6,
+        "matches": true,
+        "tolerance": 1e-05,
+        "differences": []
+      },
+      {
+        "check": "sensitivity_outliers.csv",
+        "rows": 18,
+        "matches": true,
+        "tolerance": 0.0001,
+        "differences": []
+      },
+      {
+        "check": "sensitivity_dust.csv",
+        "rows": 24,
+        "matches": true,
+        "tolerance": 0.0001,
+        "differences": []
+      },
+      {
+        "check": "sensitivity_season_ring.csv",
+        "rows": 36,
+        "matches": true,
+        "tolerance": 0.0001,
+        "differences": []
+      }
+    ],
+    "all_match": true,
+    "figures_generated": 5,
+    "remote_tasks_submitted": false
+  },
+  "qgis_individual_validation.json": {
+    "qgis": "4.2.2-Bel\u00e9m do Par\u00e1",
+    "tools": [
+      "analyze_no2_ventilation",
+      "sensitivity_analyses",
+      "fig_elasticity_controls",
+      "fig_wind_rotation"
+    ],
+    "scientific_python": "Local_QGIS_Runtime",
+    "success": true
+  },
+  "earthengine_offline_graph_validation.json": {
+    "api_version": "1.7.53",
+    "method": "Official Earth Engine ApiTestCase algorithm fixtures; graph construction/serialization only, no authenticated task submission or remote dataset evaluation.",
+    "tasks": [
+      {
+        "original_script": "C1_ERA5_export_2026_study_sites.js",
+        "kind": "era5",
+        "graph_serialized": true,
+        "encoded_length": 17836
+      },
+      {
+        "original_script": "C1_NO2_export_2026_study_sites.js",
+        "kind": "no2",
+        "graph_serialized": true,
+        "encoded_length": 5257
+      },
+      {
+        "original_script": "C2_ERA5_export_new_cities.js",
+        "kind": "era5",
+        "graph_serialized": true,
+        "encoded_length": 20300
+      },
+      {
+        "original_script": "C2_NO2_export_new_cities.js",
+        "kind": "no2",
+        "graph_serialized": true,
+        "encoded_length": 5254
+      },
+      {
+        "original_script": "C2_NO2_retry_failed.js",
+        "kind": "no2",
+        "graph_serialized": true,
+        "encoded_length": 5259
+      },
+      {
+        "original_script": "Control_site_screen.js",
+        "kind": "control_screen",
+        "graph_serialized": true,
+        "encoded_length": 3408616
+      },
+      {
+        "original_script": "D_ERA5_export_extra_controls.js",
+        "kind": "era5",
+        "graph_serialized": true,
+        "encoded_length": 12906
+      },
+      {
+        "original_script": "D_NO2_export_extra_controls.js",
+        "kind": "no2",
+        "graph_serialized": true,
+        "encoded_length": 5254
+      },
+      {
+        "original_script": "ERA5_GEE_export.js",
+        "kind": "era5",
+        "graph_serialized": true,
+        "encoded_length": 17836
+      },
+      {
+        "original_script": "ERA5_GEE_export_controls.js",
+        "kind": "era5",
+        "graph_serialized": true,
+        "encoded_length": 8070
+      },
+      {
+        "original_script": "NO2_daily_export_controls.js",
+        "kind": "no2",
+        "graph_serialized": true,
+        "encoded_length": 5254
+      },
+      {
+        "original_script": "S5P_dust_AAI_table.js",
+        "kind": "dust",
+        "graph_serialized": true,
+        "encoded_length": 24426
+      },
+      {
+        "original_script": "Site_covariates.js",
+        "kind": "site_covariates",
+        "graph_serialized": true,
+        "encoded_length": 32251
+      }
+    ],
+    "live_remote_validation": false
+  }
+}

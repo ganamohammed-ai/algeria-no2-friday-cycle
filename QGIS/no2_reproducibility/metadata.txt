@@ -1,0 +1,13 @@
+[general]
+name=NO2 Algeria Reproducibility
+description=Processing tools for all supplied NO2 analyses and Earth Engine export translations
+version=1.0.0
+qgisMinimumVersion=3.34
+qgisMaximumVersion=4.99
+author=Mohamed GANA, Chaima TOUABA, Thierry SAINT-GERAND
+email=gana.mohammed@umc.edu.dz
+about=Preserves the original scientific kernels in an isolated Python backend. Includes native Processing parameters, batch/modeler support, a full-study replay tool and explicit Earth Engine export previews. Source discrepancy: supplied WorldCover export scripts use v200 (2021).
+category=Analysis
+experimental=False
+deprecated=False
+hasProcessingProvider=yes
