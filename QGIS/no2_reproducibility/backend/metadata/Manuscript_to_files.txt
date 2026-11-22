@@ -1,0 +1,80 @@
+Table 1
+Site coordinates in scripts/analysis/analyze_no2_ventilation.py; static descriptors in data/05_site_descriptors/. Add one authoritative public sites.csv.
+
+Table 2
+outputs/no2_ventilation_daily_v2.csv; outputs/no2_daily_table.csv
+
+Table 3
+outputs/regression_results_v2_3measures.csv
+
+Table 4
+outputs/friday_cycle.csv; scripts/analysis/friday_cycle.py
+
+Table 5
+outputs/study_2026/detect_friday_holdout_2026.csv; corresponding daily CSV; detect_friday_holdout.py
+
+Table 6
+outputs/cities/detect_friday_cities.csv; corresponding daily CSV; detect_friday_cities.py
+
+Table 7
+outputs/lockdown_effect.csv; lockdown_normalisation.py
+
+Table 8
+outputs/detect_calibration_2020.csv + outputs/detect_calibration_null_windows.csv. Final log-scale descriptive ranges need an explicit export step; 60 displayed numerical fields were independently reconstructed and matched the manuscript rounding.
+
+Table S1
+outputs/wind_rotation_results.csv; wind_rotation.py; document which of two nearly identical result copies is authoritative.
+
+Table S2
+outputs/inventory_comparison.csv; data/06_edgar/; compare_edgar.py
+
+Table S3
+outputs/l2_ak_elasticity.csv + outputs/l2_ak_daily.csv; l2_ak_check.py and l2_ak_analysis.py
+
+Table S4
+outputs/sensitivity_season_ring.csv
+
+Table S5
+outputs/control/control_regression_results.csv
+
+Table S6
+outputs/sensitivity_blh_wind_split.csv
+
+Table S7
+outputs/lockdown_placebo.csv
+
+Table S8
+outputs/lockdown_ml.csv
+
+Table S9
+outputs/trend_version_steps.csv
+
+Table S10
+outputs/detect_MDE_summary.csv + outputs/control_extra/detect_extra_controls_summary.csv; retain exact injection rows as well.
+
+Table S11
+outputs/detect_injection_ols.csv; corresponding added-control injection CSVs
+
+Table S12
+outputs/detect_seasonal.csv; detect_seasonal.py requires corrected input/output paths before public use.
+
+Figure 1
+outputs/fig1_no2_vs_ventilation.png; fig_no2_vs_ventilation.py
+
+Figure 2
+outputs/fig_elasticity_with_controls.png; exact generation command/export step must be documented.
+
+Figure 3
+outputs/fig_friday_effect.png; fig_friday.py (README still calls it Figure 5).
+
+Figure 4
+outputs/fig_lockdown_effect.png; fig_lockdown.py
+
+Figure S1
+outputs/fig_wind_rotation.png; fig_wind_rotation.py
+
+Friday uncertainty checks
+outputs/detect_friday_se_check_2019_2025.csv; outputs/detect_friday_se_check_2026.csv; outputs/detect_friday_se_check.csv; outputs/detect_friday_placebo_days.csv. Document period filtering and output naming.
+
+Single-version Level-2 2020 replication
+outputs/l2_v240_daily_q75all.csv + l2_lockdown_*_q75all.csv + l2_vs_l3_q75all.csv; scripts/run/9c_l2_with_controls.bat. Do not substitute q50 or q75 study-only intermediates.

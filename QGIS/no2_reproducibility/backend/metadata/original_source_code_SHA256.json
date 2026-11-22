@@ -1,0 +1,182 @@
+[
+  {
+    "path": "scripts/analysis/analysis_plan_lockdown_normalisation.md",
+    "sha256": "506834abb6be33863fb60bc97a5406194008df6da08f7c35a6cf6d88cde78a44"
+  },
+  {
+    "path": "scripts/analysis/analysis_plan_v2_detectability.md",
+    "sha256": "4c6dd92469b4a2a0721c9bb9e84f4cf3bc2ce975b0fa23248ee4e48d87f15e19"
+  },
+  {
+    "path": "scripts/analysis/analyze_no2_ventilation.py",
+    "sha256": "402c75620f650e5647e395dd7f771a7a2d8e261e5fa4ea0e2c375791ba0ed8c6"
+  },
+  {
+    "path": "scripts/analysis/compare_edgar.py",
+    "sha256": "a4db624880ee85538009a801c62882ec9f2373834c8557c2a6a4223fcf8cf322"
+  },
+  {
+    "path": "scripts/analysis/decompose_blh_wind.py",
+    "sha256": "f0d26068ea852432cf162154fd351dd2e058a2fa0242122d0ac288124105a21a"
+  },
+  {
+    "path": "scripts/analysis/detect_calibrate.py",
+    "sha256": "e72c3bb2dccb748931b7ebdf8055ad88bbdf1182bf6e726e1531905dd785bd8b"
+  },
+  {
+    "path": "scripts/analysis/detect_friday_cities.py",
+    "sha256": "2315184771c5a432e3b89377ddaf2a863008fe480267f2972ef1c508106cf347"
+  },
+  {
+    "path": "scripts/analysis/detect_friday_holdout.py",
+    "sha256": "8e2c428508609f735ce112142bd0272626690c37f4f6b8f85c9840322fbf2082"
+  },
+  {
+    "path": "scripts/analysis/detect_friday_se_check.py",
+    "sha256": "eb841c8c3a0d80ac8f44b4c4fe7872830e2b04dba682518cd6d48c864871193a"
+  },
+  {
+    "path": "scripts/analysis/detect_injection.py",
+    "sha256": "feb64b26153a7c42a8898b99e2a1db835649f4f720d7ea502bcc65d3ce5fe74f"
+  },
+  {
+    "path": "scripts/analysis/detect_seasonal.py",
+    "sha256": "6ca32a06bec46540357a60e29d0bb8b4b177b17c0f6cc954db25ad0ed6e0a069"
+  },
+  {
+    "path": "scripts/analysis/fig_friday.py",
+    "sha256": "6c7a7f814cf4a5ec7012aa8bf33ad81059bc5dcc233e7a15bc5fa371e44a0dd7"
+  },
+  {
+    "path": "scripts/analysis/fig_lockdown.py",
+    "sha256": "848d45ee8568391eba30a7c7b6106311910002596958abe2388f62b5b7dc3ef7"
+  },
+  {
+    "path": "scripts/analysis/fig_no2_vs_ventilation.py",
+    "sha256": "8c6719513fa25435b29dc65edf71afb7d85efd4c53544a653b600f843eb81dcf"
+  },
+  {
+    "path": "scripts/analysis/fig_wind_rotation.py",
+    "sha256": "a00c41607e9970e26a50a49aa42a79495a6a9f4b0ca4303d0d5aee410e78f4c7"
+  },
+  {
+    "path": "scripts/analysis/friday_cycle.py",
+    "sha256": "d0c57d43097c3e3a620fa6a2887cd2869eda38c95cdd020971fe25fb202906fb"
+  },
+  {
+    "path": "scripts/analysis/l2_ak_analysis.py",
+    "sha256": "d1f9ac5db084b8300654dddf00a23ff390542770e5118dddbbbbf23afb140cb0"
+  },
+  {
+    "path": "scripts/analysis/l2_ak_check.py",
+    "sha256": "7a0b7816504ee4a4202a86ef0d5b38ac3bcd831a11609d2b4a5c17808e2bac29"
+  },
+  {
+    "path": "scripts/analysis/l2_daily_table.py",
+    "sha256": "292b455824c3c14cc9e420d0f79e1b6da4aaae4cbc981f83c40483df8e030a75"
+  },
+  {
+    "path": "scripts/analysis/lockdown_l2.py",
+    "sha256": "2e4c02a8b08f3adfdc4c3e593517f9059a7005f06ed55c0a2e0fd30c9506d1f2"
+  },
+  {
+    "path": "scripts/analysis/lockdown_normalisation.py",
+    "sha256": "cdbaa64c10db7839833e3c7f0b338fae213b7f0c7216122a2602a9216f99d50f"
+  },
+  {
+    "path": "scripts/analysis/run_extra_detect.py",
+    "sha256": "30ef59c8ff28760ca8cf15a2ff93e5bf05d2b40f1011645c4fc5eb004ccd82da"
+  },
+  {
+    "path": "scripts/analysis/run_extra_sites.py",
+    "sha256": "0de0150476e5bc0c6ad784159828e52bc1bc6fe40b7f08dfde52bb3f7870b603"
+  },
+  {
+    "path": "scripts/analysis/select_control.py",
+    "sha256": "27797d5acca9e39dccb8b979034e70884f8b64ca50486fcce696e9f9174aea3b"
+  },
+  {
+    "path": "scripts/analysis/select_extra_controls.py",
+    "sha256": "c40a09b2759bc75d38be8955a0c0a37b65921f86125e095a877fbfdaf17a0fa5"
+  },
+  {
+    "path": "scripts/analysis/sensitivity_analyses.py",
+    "sha256": "8662df7cf70b2c5fac3fd4b8c52eff0216e6f91925c0bc78321af821094f558f"
+  },
+  {
+    "path": "scripts/analysis/sensitivity_version_steps.py",
+    "sha256": "747bb1f183509db0a81a257bb147ed7453ab072b77c3dd295083233612870bb6"
+  },
+  {
+    "path": "scripts/analysis/version_audit.py",
+    "sha256": "d4d5d06872495d8f76bdca91ee65d5f5d4e524b787436809b4fe4c4c4f6278e1"
+  },
+  {
+    "path": "scripts/analysis/wind_rotation.py",
+    "sha256": "367bff2b943515f4645d9e846365752902aea684365363da03d7a916a38a8e99"
+  },
+  {
+    "path": "scripts/download/era5_download.py",
+    "sha256": "3eb9ef9b5bff61d4ba3d7d7cbfa07770ab4ab45c616f4701f76946e167ace8e1"
+  },
+  {
+    "path": "scripts/download/sites.py",
+    "sha256": "22c19a4ce06d81dba975d1893756dedb76e282baa710967064e90cb64a6222af"
+  },
+  {
+    "path": "scripts/download/tropomi_download.py",
+    "sha256": "001b12b9d15b2dc820435e83bd77b24fc140146e95eaf6ea46c837e8de331d70"
+  },
+  {
+    "path": "scripts/gee/C1_ERA5_export_2026_study_sites.js",
+    "sha256": "6b57f476c15cb7157962cc913903afeefae00c5e083f12a5efcbf912b30ca20c"
+  },
+  {
+    "path": "scripts/gee/C1_NO2_export_2026_study_sites.js",
+    "sha256": "f33de770f51f341e6e67a728c4cd60a8d743d07da33d932d71fc3e54cdccb919"
+  },
+  {
+    "path": "scripts/gee/C2_ERA5_export_new_cities.js",
+    "sha256": "41907c25a49a138ee895a5d6b882ec55c0fd280ca51b01b325754854f35a99f9"
+  },
+  {
+    "path": "scripts/gee/C2_NO2_export_new_cities.js",
+    "sha256": "d1d01e5be65a4537fd0f0d5f4bcf114835416828e6df25731fd62cc8a66575c5"
+  },
+  {
+    "path": "scripts/gee/C2_NO2_retry_failed.js",
+    "sha256": "6b136527297356136614f28a866e15ef7674697ea2dae6f69300fd7390cbcc0d"
+  },
+  {
+    "path": "scripts/gee/Control_site_screen.js",
+    "sha256": "003be59c28d8fe464fdc054de5d7908c2d42145525b246bb97fd0d80ba4325bd"
+  },
+  {
+    "path": "scripts/gee/D_ERA5_export_extra_controls.js",
+    "sha256": "72517475c1e53a09caa0b1a3d7da83e4241b8795b7250f78ece5370dcb598791"
+  },
+  {
+    "path": "scripts/gee/D_NO2_export_extra_controls.js",
+    "sha256": "37ae597c1f8ab8171925d0d3d16dd4e4fa775c84776d694d7e9c1abe979de534"
+  },
+  {
+    "path": "scripts/gee/ERA5_GEE_export.js",
+    "sha256": "9eac63f26155d55693d86d77fe563526c6bbc48cc61c51d0df0cd766afb799b8"
+  },
+  {
+    "path": "scripts/gee/ERA5_GEE_export_controls.js",
+    "sha256": "5654fedb7f842f769d6ac7587850958670cf60d3990f2f0d49310b8ddc26dba0"
+  },
+  {
+    "path": "scripts/gee/NO2_daily_export_controls.js",
+    "sha256": "71292180fa09b55a34737632fa1d5966feb4f84da5b60b97a0b06aba72ff47fc"
+  },
+  {
+    "path": "scripts/gee/S5P_dust_AAI_table.js",
+    "sha256": "b4be6c24f865819e5da7e9c3866ca8bc8feda0580e92a1799b7869d126d8718c"
+  },
+  {
+    "path": "scripts/gee/Site_covariates.js",
+    "sha256": "e5a8c832715268b2bff3a8edb3f98ddbb8f8d36c0102de7bf605dea70dd9cb43"
+  }
+]
