@@ -4,6 +4,14 @@ Publication code for **The Friday NO₂ decline across Algerian cities in weathe
 
 Authors: Mohamed GANA, Chaima TOUABA, Thierry SAINT-GERAND. Correspondence: gana.mohammed@umc.edu.dz. Mohamed GANA: https://orcid.org/0000-0003-0775-6954 . Affiliations are in CITATION.cff and .zenodo.json. Thierry's Caen affiliation was confirmed by the corresponding author during package preparation.
 
+## Public data and software
+
+- Dataset: https://doi.org/10.5281/zenodo.24445977
+- Source repository: https://github.com/ganamohammed-ai/algeria-no2-friday-cycle
+- Fixed software release and installable QGIS plugin: https://github.com/ganamohammed-ai/algeria-no2-friday-cycle/releases/tag/v1.0.0
+
+The Zenodo record archives the processed data, selected upstream inputs and the code/plugin ZIPs. Its DOI identifies this combined supporting dataset; it is not the manuscript DOI or a separate software-release DOI.
+
 ## Scientific scope
 
 Six study sites, six background sites and seven further cities; original record 7 August 2019–31 December 2025, with replication through 14 November 2026. Weekly-cycle discovery was exploratory. Subsequent predictions and deviations are documented in the original staged plans, preserved verbatim in scripts/analysis/. They are not represented as a public preregistration. The failed Annaba ranking prediction remains part of the record. The 2020 ranges and injection calibration remain exploratory.
@@ -23,7 +31,7 @@ requirements.txt lists the direct dependencies for a fresh environment. The pinn
 
 ## Data layout and replay
 
-The delivered desktop package has sibling GitHub/ and Zenodo/ directories. The default runner reads ../Zenodo/processed/. For an independent clone, download **01_processed_data_and_results.zip** from the dataset record, extract it into a directory, and pass that directory as --data-root. No DOI or GitHub URL is invented before actual publication.
+The delivered desktop package has sibling GitHub/ and Zenodo/ directories. The default runner reads ../Zenodo/processed/. For an independent clone, download **01_processed_data_and_results.zip** from the dataset record, extract it into a directory, and pass that directory as --data-root. The public dataset and fixed software-release links are listed above.
 
 ```sh
 python reproduce.py --mode quick --data-root ../Zenodo/processed --out reproduced_results
@@ -65,7 +73,7 @@ The runner's period-specific covariance checks write to separate subdirectories,
 
 Code version: 1.0.0. MIT licence for code. CC BY 4.0 applies to author-owned derived data/results; original source data retain their terms (THIRD_PARTY_DATA.md). Source project files were not modified. Original plans remain unchanged; publication-only changes are listed in CHANGES_PUBLICATION.txt.
 
-Create the GitHub repository, upload these code files, tag the reviewed release and archive that specific release with Zenodo. Use zenodo_metadata.json from the sibling dataset directory to populate the dataset record; it is not a journal-article DOI. Once actual records exist, insert the real dataset DOI and code-release DOI in this README, citation metadata and the manuscript. .zenodo.json supplies the software metadata for GitHub–Zenodo integration.
+The v1.0.0 software release is fixed at commit 90ec32861ea90e0ad018bf80d1730a633b6eb621. All 146 published source/documentation files were checked byte-for-byte against the prepared package. Subsequent README and citation-link updates do not alter the scientific code in that release. The supporting Zenodo dataset also contains the original code ZIP and QGIS plugin ZIP. No separate software DOI has been minted.
 
 ## QGIS Processing tools
 
